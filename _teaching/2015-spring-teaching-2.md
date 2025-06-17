@@ -1,20 +1,15 @@
 ---
-title: "Teaching experience 2"
+title: "Tutoring"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+type: "Math and Statistics tutoring"
+permalink: /teaching/tutoring
+venue: 
+date: 06-17-2025
+location: "Remote"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Tutoring has given me so many lessons in patience, understanding, meeting people where they are, and forming trust and relationships. I really want to see my students thrive and do well, not just scrape by. It is truly a joy to teach. 
 
-Heading 1
-======
+I've tutored students of all ages since high school, particularly in the subject of math, but more recently in statistics as well! I can also tutor for the SAT and ACT, as well.
 
-Heading 2
-======
-
-Heading 3
-======
+If you're looking for tutoring services, please drop me a message. Or if you have any questions, too. I love to research and figure out how to better distill a complex topic into digestible bits. Let's learn together!
