@@ -4,7 +4,7 @@ collection: teaching
 type: "Math and Statistics tutoring"
 permalink: /teaching/tutoring
 venue: ""
-date: 06-17-2025
+date: 2025-06-17
 location: "Remote"
 ---
 
