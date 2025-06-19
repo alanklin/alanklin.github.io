@@ -1,11 +1,10 @@
 ---
-title: 'Blog Post number 2'
-date: 2013-08-14
-permalink: /posts/2013/08/blog-post-2/
+title: 'Sepsis Detection using Machine Learning Techniques'
+date: 06-18-2025
+permalink: /posts/2024/09/sepsis/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - machine-learning
+  - healthcare
 ---
 
 This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.

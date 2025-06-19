@@ -3,7 +3,7 @@ title: "Tutoring"
 collection: teaching
 type: "Math and Statistics tutoring"
 permalink: /teaching/tutoring
-venue: ""
+venue: "Remote"
 date: 2025-06-17
 location: "Remote"
 ---
