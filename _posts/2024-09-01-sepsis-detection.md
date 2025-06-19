@@ -1,6 +1,6 @@
 ---
 title: 'Sepsis Detection using Machine Learning Techniques'
-date: 06-18-2025
+date: 2025-06-18
 permalink: /posts/2024/09/sepsis/
 tags:
   - machine-learning
