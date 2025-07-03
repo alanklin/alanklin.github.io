@@ -32,6 +32,8 @@ Vital Signs
 |---------------|------------------------|-----|------------|
 | Heart Rate (beats per minute) | Result | Heart rate elevations are common response to infection | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6102166/" target="_blank">Paper</a>|
 | O2Sat (Pulse Oximetry) | Indicator | Low oxygen saturation can indicate impaired immune response, patients may need futher evaluation or treatment | [Paper](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02008/full) |
+
+
   * Temperature (in Celcius)
   * Systolic BP (mm Hg)
   * Mean arterial pressure (mm Hg)
