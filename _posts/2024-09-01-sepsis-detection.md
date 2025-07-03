@@ -28,20 +28,24 @@ It's divided into three main categories: Vital signs, Laboratory values, and Dem
 Vital Signs
 
 
-| Variable Name | Relationship to Sepsis | How | Paper Link |
+| Variable Name | Relationship to Sepsis | Description | Information Link |
 |---------------|------------------------|-----|------------|
-| Heart Rate (beats per minute) | Result | Heart rate elevations are common response to infection | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6102166/" target="_blank">Paper</a>|
-| O2Sat (Pulse Oximetry) | Indicator | Low oxygen saturation can indicate impaired immune response, patients may need futher evaluation or treatment | [Paper](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02008/full) |
+| Heart Rate (beats per minute) | Result | Heart rate elevations are common response to infection | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6102166/" target="_blank">Link</a> |
+| O2Sat (Pulse Oximetry) | Indicator | Low oxygen saturation can indicate impaired immune response, patients may need futher evaluation or treatment | <a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02008/full" target="_blank">Link</a> |
+| Temperature (in Celcius) | Result | Infections are associated with rising body temperatures. Some individuals can experience lower body temperature, as well. | <a href="https://www.nidirect.gov.uk/news/recognising-signs-and-symptoms-sepsis#:~:text=The%20early%20symptoms%20of%20sepsis,chills%20and%20shivering" target="_blank">Link</a> |
+| Systolic BP (mm Hg) | Indicator | Low blood pressure can cause septic shock, but not sepsis itself. Falling below 100 can be indication of sepsis. | <a href="https://www.kidney.org/kidney-topics/sepsis#:~:text=Diagnosis-,Diagnosing%20sepsis%20requires%20a%20medical%20assessment%20by%20a%20healthcare%20professional,than%20or%20equal%20to%20100." target="_blank">Link</a> |
+| Mean arterial pressure (mm Hg) | Indicator | MAP = DP + (SP-DP)/3.  Can decrease due to vasodilation and cardiac dysfunction | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10492407" target="_blank">Link</a> |
+| Diastolic BP (mm Hg) | Indicator | Blood pressure still an indicator for sepsis, might actually be more important than systolic! | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10492407" target="_blank">Link</a> | 
+| Respiration rate (breaths per minute) | Result | Generally increases during sepsis, patients can have trouble breathing fighting off infection and fever | <a href="https://www.jointcommissionjournal.com/article/S1553-7250(18)30040-0/abstract" target="_blank">Link</a> |
+|End tidal carbon dioxide (mm Hg) | Result | Low values have ben used to predict mortality in potentially septic patients | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5942006/" target="_blank">Link</a> |
 
 
-  * Temperature (in Celcius)
-  * Systolic BP (mm Hg)
-  * Mean arterial pressure (mm Hg)
-  * Diastolic BP (mm Hg)
-  * Respiration rate (breaths per minute)
-  * End tidal carbon dioxide (mm Hg)
+
 
 * Laboratory Values
+
+
+
   * Excess Bicarbonate (mmol/L)
   * Bicarbonate (mmol/L)
   * Fraction of inspired oxygen (%)
