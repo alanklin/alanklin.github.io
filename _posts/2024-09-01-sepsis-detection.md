@@ -23,6 +23,12 @@ Sepsis is a life-threatening condition that spurs from a complication of an infe
 
 We were provided physiological training data and labels that included hourly measurements for patients. There is about 1.09 million observations associated with 28,235 unique patients and over 3 dozen predictors in the original training set. Let's dive deeper into the variables.
 
+Exploratory Data Analysis
+------ 
+
+Defining Variables
+====== 
+
 These variables are divided into three main categories: Vital signs, Laboratory values, and Demographics. Each member researched and compiled the following information to help us better understand what each variable is and how it relates to sepsis. We used this information to help us dial in on more promising and available indicators.
 
 * Vital Signs
