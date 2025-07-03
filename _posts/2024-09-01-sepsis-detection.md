@@ -21,13 +21,18 @@ The Problem
 
 Sepsis is a life-threatening condition that spurs from a complication of an infection, where chemicals released in the bloodstream to fight an infection triggers inflammation throughout the body. This can lead to tissue damage, organ failure, and even death if left untreated. Each year in the United States, at least 1.7 million adults develop sepsis, with over 350,000 dying in hospitalization or discharged to hospice. So, our challenge is to predict the onset of sepsis prior to its diagnosis. 
 
-We were provided physiological training data and labels that included hourly measurements for patients. There is about 1.09 million observations associated with 28,235 unique patients and over 3 dozen predictors in the original training set. Let's dive deeper into the variables.
+This is a visualization of the general data pipeline we will be following. 
+
+<img src='/images/sepsis-pipeline-picture.png'>
+
+
 
 Exploratory Data Analysis
 ------ 
 
-Defining Variables
-====== 
+### Defining Variables
+We were provided physiological training data and labels that included hourly measurements for patients. There is about 1.09 million observations associated with 28,235 unique patients and over 3 dozen predictors in the original training set. Let's dive deeper into the variables.
+
 
 These variables are divided into three main categories: Vital signs, Laboratory values, and Demographics. Each member researched and compiled the following information to help us better understand what each variable is and how it relates to sepsis. We used this information to help us dial in on more promising and available indicators.
 
@@ -94,4 +99,16 @@ These variables are divided into three main categories: Vital signs, Laboratory 
 | ICULOS| ICU length-of-stay (hours since ICU admit) | 
 
 
+### Preparing the Data
 
+Through our research, we gained valuable information about what sepsis is and how some of the indicators could be used in our models. But, we quickly noticed that a number of variables were missing values, particularly the laboratory values. We attributed this to the possibility that testing and taking these values at each hour for each patient can be unfeasible for hospitals to do. We decided that variables with more than 95% missing values were too sparse and removed them from the next step: data imputation.
+
+Data imputation is the process of replacing missing data with substituted values. It enables us to use machine learning models that require complete datasets and helps to retain valuable information instead of discarding incomplete data. 
+
+We settled with a forward/backwards imputation technique which can be demonstrated in the photo below.
+
+
+<img src='/images/sepsis-imputation.png'>
+
+
+Forward imputation is as the name suggests, we will fill missing values by taking the last known value forward. So, you can see that the empty red values have been substituted with the preceding value. Backwards fill is simply the opposite, as shown by the blue values. This was a pretty naive and straightforward imputation method, but it didn't always cover all the bases, so we also leaned on MissForest imputation, a technique that utilizes random forests to predict and fill in the remaining missing values. 
