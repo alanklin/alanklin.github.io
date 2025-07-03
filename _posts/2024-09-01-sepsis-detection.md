@@ -25,7 +25,7 @@ We were provided physiological training data and labels that included hourly mea
 
 It's divided into three main categories: Vital signs, Laboratory values, and Demographics.
 
-* Vital Signs
+Vital Signs
 | Variable Name | Relationship to Sepsis | How | Paper Link |
 |---------------|------------------------|-----|------------|
 | Heart Rate (beats per minute) | Result | Heart rate elevations are common response to infection | [Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6102166/)|
