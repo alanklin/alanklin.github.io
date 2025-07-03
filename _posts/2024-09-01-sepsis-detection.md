@@ -26,10 +26,12 @@ We were provided physiological training data and labels that included hourly mea
 It's divided into three main categories: Vital signs, Laboratory values, and Demographics.
 
 Vital Signs
+
+
 | Variable Name | Relationship to Sepsis | How | Paper Link |
 |---------------|------------------------|-----|------------|
-| Heart Rate (beats per minute) | Result | Heart rate elevations are common response to infection | [Paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6102166/){target="_blank"}|
-| O2Sat (Pulse Oximetry) | Indicator | Low oxygen saturation can indicate impaired immune response, patients may need futher evaluation or treatment | [Paper](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02008/full){target="_blank"} |
+| Heart Rate (beats per minute) | Result | Heart rate elevations are common response to infection | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6102166/" target="_blank">Paper</a>|
+| O2Sat (Pulse Oximetry) | Indicator | Low oxygen saturation can indicate impaired immune response, patients may need futher evaluation or treatment | [Paper](https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2018.02008/full) |
   * Temperature (in Celcius)
   * Systolic BP (mm Hg)
   * Mean arterial pressure (mm Hg)
