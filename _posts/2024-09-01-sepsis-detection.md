@@ -181,7 +181,7 @@ The number of hidden layers and neurons was settled upon by striking a balance b
 
 With these parameters, our best performing neural network achieved an F1-score of 0.1825 on the validation set. At a glance, our model was incredibly successful at predicting non-sepsis. however, it was comparitively less effective at predicting sepsis, as evidenced by a precision value of 0.14 and a recall value of 0.25, although this was a bit to be expected.
 
-Looking at both the recall value and confusion matrix, our neural network model was able to correctly predict around a quarter of all time steps labeled with Sepsis. Although we recognized that a high recall value is incredibly important in a medical setting, we felt that it is worth pointing out that false positive sepsis diagnoses can be dangerous, as hospital resources can become stretched and we don't want to subject patients to more stress and costs by administering unnecessary treatments. Therefore, maximizing the F1-score based on the prediction throushold provided that key balance between the True Positive and Flase positive rates.
+Looking at both the recall value and confusion matrix, our neural network model was able to correctly predict around a quarter of all time steps labeled with Sepsis. Although we recognized that a high recall value is incredibly important in a medical setting, we felt that it is worth pointing out that false positive sepsis diagnoses can be dangerous, as hospital resources can become stretched and we don't want to subject patients to more stress and costs by administering unnecessary treatments. Therefore, maximizing the F1-score based on the prediction throushold provided that key balance between the True Positive and False positive rates.
 
 <img src='/images/sepsis-threshold.png'>
 
@@ -199,16 +199,16 @@ Although our model was not technically the best-performing across all teams, the
 
 <figure>
   <img src="/images/sepsis-photos1.jpeg" alt="Photo of everyone">
-  <figcaption>Group photo of BC Case Competition 2024. From left to right: Sasha Tomic, Arvind Sharma, Angelo Marinaro, Trevor Petrin, Pin Lyu, Alan Lin, David Weinberg, Debashis Rana, Larry Fulton, Matthew Williams</figcaption>
+  <figcaption>Group photo of BC Case Competition 2024. From left to right: Sasha Tomic, Doc. Arvind Sharma, Angelo Marinaro, Trevor Petrin, Pin Lyu, Alan Lin, David Weinberg, Debashis Rana, Doc. Larry Fulton, Matthew Williams</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/sepsis-photos2.jpeg" alt="Photo of my team">
+  <img src="/images/sepsis-photos2.jpg" alt="Photo of my team">
   <figcaption>My team! So proud of everyone.
    From left to right: Trevor Petrin, Alan Lin, Angelo Marinaro, and Pin Lyu. </figcaption>
 </figure>
 
 <figure>
-  <img src="/images/sepsis-photos3.jpeg" alt="Photo of Me">
+  <img src="/images/sepsis-photos3.jpg" alt="Photo of Me">
 </figure>
 
