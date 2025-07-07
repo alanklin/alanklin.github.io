@@ -118,11 +118,11 @@ Forward imputation is as the name suggests, we will fill missing values by takin
 
 Every machine learning project is incomplete without defining how the data will be split into a training and validation set. We were already provided a test set to generate predictions but we can only evaluate those results by uploading a submission into Kaggle. A validation set created from the training set would help us simulate results and tweak hyperparameters without using up our limit of 5 submissions a day. 
 
-So, in the interest of creating a fair validation set, we performed a stratified sampling method, where we based the split on whether a patient ever developed sepsis at any point during their hospital stay.Essentially, we couldn't just randomize the sampling process because we were dealing with a panel dataset, where we're tracking the same variables for patients over time. If we had simply randomized the rows into a training and validation set, we'd lose the temporal aspect of the study, a key part of the task. Our validation set took 20% of the original training set but we preserved the starting proportions of Sepsis/non-Sepsis patients.
+So, in the interest of creating a fair validation set, we performed a stratified sampling method, where we based the split on whether a patient ever developed sepsis at any point during their hospital stay. Essentially, we couldn't just randomize the sampling process because we were dealing with a panel dataset, where we're tracking the same variables for patients over time. If we had simply randomized the rows into a training and validation set, we'd lose the temporal aspect of the study, a key part of the task. Our validation set took 20% of the original training set but we preserved the starting proportions of Sepsis/non-Sepsis patients.
 
 ### Feature Engineering
 
-Even with over three dozen potential indicators of sepsis, through our research, we quickly came across other indicators that weren't in the dataset but could be easily created through feature engineering. For example, we can use the patient's respiratory rate to check for Tachypnea, the medical term for rapid, shallow breathing, generally defined as over 20 breaths per minute. Other features that were created includes but aren't limited to the following:
+Even with over three dozen potential indicators of sepsis, through our research, we quickly came across other indicators that weren't in the dataset but could be easily created through feature engineering. For example, we can use the patient's respiratory rate to check for Tachypnea, the medical term for rapid and shallow breathing, generally defined as over 20 breaths per minute. Other features that were created includes but aren't limited to the following:
 
   * **BUN to Creatinine ratio**
   * **Shock Index**
@@ -212,3 +212,4 @@ Although our model was not technically the best-performing across all teams, the
   <img src="/images/sepsis-photos3.jpg" alt="Photo of Me">
 </figure>
 
+A big thank you to Boston College for setting up this event for us to gain valuable experience in public speaking, working as a team, and applying our machine learning skills to a highly relevant real-world task. To Doc. Larry and Doc. Arvind, thank you for your mentoring and advice throughout this project. And thank you to you, the reader for sticking with me through this article! I'd love to hear your thoughts.
