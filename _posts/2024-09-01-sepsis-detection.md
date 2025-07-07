@@ -212,4 +212,4 @@ Although our model was not technically the best-performing across all teams, the
   <img src="/images/sepsis-photos3.jpg" alt="Photo of Me">
 </figure>
 
-A big thank you to Boston College for setting up this event for us to gain valuable experience in public speaking, working as a team, and applying our machine learning skills to a highly relevant real-world task. To Doc. Larry and Doc. Arvind, thank you for your mentoring and advice throughout this project. And thank you to you, the reader for sticking with me through this article! I'd love to hear your thoughts.
+A big thank you to Boston College for setting up this event for us to gain valuable experience in public speaking, working as a team, and applying our machine learning skills to a highly relevant real-world task. To Doc. Larry and Doc. Arvind, thank you for your mentoring and advice throughout this project. And thank you to you, the reader, for sticking with me through this article! I'd love to hear your thoughts.
