@@ -6,7 +6,6 @@ tags:
   - machine-learning
   - healthcare
 ---
-
 Setting the Stage
 ------
 
@@ -21,10 +20,9 @@ The Problem
 
 Sepsis is a life-threatening condition that spurs from a complication of an infection, where chemicals released in the bloodstream to fight an infection triggers inflammation throughout the body. This can lead to tissue damage, organ failure, and even death if left untreated. Each year in the United States, at least 1.7 million adults develop sepsis, with over 350,000 dying in hospitalization or discharged to hospice. So, our challenge is to predict the onset of sepsis prior to its diagnosis. 
 
-This is a visualization of the general data pipeline we will be following. 
+This is a visualization of the data pipeline that we will be following in this blog post. Buckle up!
 
 <img src='/images/sepsis-pipeline-picture.png'>
-
 
 
 Exploratory Data Analysis
