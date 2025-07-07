@@ -132,3 +132,41 @@ Even with over three dozen potential indicators of sepsis, through our research,
 I want to direct focus onto the SOFA score, which is also known as the [Sequential Organ Failure Assessment Score](https://www.mdcalc.com/calc/691/sequential-organ-failure-assessment-sofa-score). This calculator helps to determine the extent of organ dysfunction in critically ill patients. While it isn't designed specifically to diagnose sepsis because patients will manifest symptoms in unique ways, these parameters can help clinicians identify and react to sepsis.  
 
 We called our variable the partial SOFA score because we didn't have all of the variables to generate the complete SOFA score, but it was still an invaluable feature to include. The calculator linked above shows how different levels of each feature corresponds to a higher SOFA score and we utilized this knowledge in our feature engineering step. 
+
+
+### SMOTE 
+
+One of the biggest challenges we overcame in this competition was the substantial data imbalance between sepsis/non-sepsis records. We decided to address this by utilizing [SMOTE](https://www.jair.org/index.php/jair/article/view/10302) (Synthetic Minority Oversampling Technique), an oversampling technique where synthetic samples are generated for the minority class. By using imbalanced-learn (a package under sklearn) and it's implementation of SMOTE, we inflated the proportion of sepsis cases to 30% as an attempt to give the algorithm more examples to learn about the variables associated with sepsis diagnosis. 
+
+
+### Scaling
+
+We fit a Standard Scaler on continuous variables to standardize the range of independent features and ensure that each variable will contribute equally to the model's learning process. We don't want features with larger values to overshadow the others just because it has larger nominal values. In addition, scaling helps improve model convergence and training speed as it requires less iterations to calculate smaller values.
+
+### Drop Variables
+
+The final step in our Data Processing pipeline is to drop variables that won't be used in the model training process. Other than dropping features that were too sparse in the data, we also dropped features that went into calculating the newly engineered features, as we figured the information captured in the new features need not be duplicated by also including the original features. We also moved to drop highly correlated variables to continue simplifyng the model and reduce computation time. By the end of this process, we were working with only 15 features, much less than the initial 42. 
+
+
+Models
+------
+
+We decided to pursue 5 different modelling approaches. Here were our results.
+
+<img src='/images/sepsis-model-results.png'>
+
+Our best performing model by metric alone is the Neural Network, which I poured countless hours of tuning into, even though the following computational graph for our Neural Network might look quite simple. 
+
+<img src='/images/sepsis-nn-architecture.png'>
+
+There are 5 hidden layers that utilize a ReLU activation function as well as batch normalization and dropout layers to aid in training speed, convergence, and model generalization on unseen data. The output layer utilizes a sigmoid activation function to generate a value betweeen 0 and 1 to signify the probability of being a positive sample. By using one neuron in this layer, we ensure that we generate one prediction for each time point. 
+
+In addition, the final hyperparameter values after tuning are laid out below.
+
+<img src='/images/sepsis-nn-parameters.png'>
+
+The epoch value is a bit arbitrary as I utilized an early stopping function that tracked validation loss, where it terminated training if 5 epochs had passed without a further decrease in loss. We elected to restore the model weights from the epoch with the the minimum loss value because it demonstrates the best validation performance and represents a model that presumably is not overfit on training data and will generalize well to the unseen test set.
+
+Dropout layers were included to improve model generalization and training speed. By randomly turning off a set of neuron during the training process, we could force the model to rely on other neurons to update its weights. In theory, this would enable the model to make full use of the entire connections within the model architecture, instead of over-relying on a subset of neurons for its predictions. 
+
+The number of hidden layers and neurons was settled upon by striking a balance between training speed and model complexity. I found that a deeper neural network model with more layers but less neurons performed better than a shallow NN model with more neurons. 
