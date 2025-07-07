@@ -82,7 +82,7 @@ These variables are divided into three main categories: Vital signs, Laboratory 
 | Partial thromboplastin time (seconds) | When PTT is high, blood is not clotting well. Related to platelet count, could be a sign of sepsis | <a href="https://www.sepsis.org/sepsis-basics/testing-for-sepsis/" target="_blank">Sepsis Alliance</a> |
 | White Blood Cell Count | WBC at elevated levels are a sign of a current infection, lower levels signifies susceptibility to infection | <a href="https://www.yalemedicine.org/conditions/sepsis#:~:text=Blood%20tests%20may%20reveal%20the%20following%20signs%20suggestive,person%20is%20at%20higher%20risk%20of%20developing%20one." target="_blank">Yale Medicine</a> |
 | Fibrinogen (mg/dL) | Decreased levels occurs only in later stages of sepsis | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9961497/" target="_blank">Tsantes, et al.</a> |
-| Platelet count | Low platelet count is a key sign of sepsis | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6679237/" target="_blank">Vardon-Bounes, et al.</a> a|
+| Platelet count | Low platelet count is a key sign of sepsis | <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6679237/" target="_blank">Vardon-Bounes, et al.</a>|
 
 
 
