@@ -151,15 +151,19 @@ The final step in our Data Processing pipeline is to drop variables that won't b
 Models
 ------
 
-We decided to pursue 5 different modelling approaches. Here were our results.
+We decided to pursue 5 different modeling approaches. Here were our results.
 
 <img src='/images/sepsis-model-results.png'>
 
-Our best performing model by metric alone is the Neural Network, which I poured countless hours of tuning into, even though the following computational graph for our Neural Network might look quite simple. 
+Our best performing model by metrics alone is the Neural Network, which I poured countless hours of tuning into, even though the following computational graph for our Neural Network might look quite simple. 
+
+### Model Architecture
 
 <img src='/images/sepsis-nn-architecture.png'>
 
 There are 5 hidden layers that utilize a ReLU activation function as well as batch normalization and dropout layers to aid in training speed, convergence, and model generalization on unseen data. The output layer utilizes a sigmoid activation function to generate a value betweeen 0 and 1 to signify the probability of being a positive sample. By using one neuron in this layer, we ensure that we generate one prediction for each time point. 
+
+### Model Parameters
 
 In addition, the final hyperparameter values after tuning are laid out below.
 
@@ -170,3 +174,37 @@ The epoch value is a bit arbitrary as I utilized an early stopping function that
 Dropout layers were included to improve model generalization and training speed. By randomly turning off a set of neuron during the training process, we could force the model to rely on other neurons to update its weights. In theory, this would enable the model to make full use of the entire connections within the model architecture, instead of over-relying on a subset of neurons for its predictions. 
 
 The number of hidden layers and neurons was settled upon by striking a balance between training speed and model complexity. I found that a deeper neural network model with more layers but less neurons performed better than a shallow NN model with more neurons. 
+
+### Model Evaluation
+
+<img src='/images/sepsis-nn-parameters.png'>
+
+With these parameters, our best performing neural network achieved an F1-score of 0.1825 on the validation set. At a glance, our model was incredibly successful at predicting non-sepsis. however, it was comparitively less effective at predicting sepsis, as evidenced by a precision value of 0.14 and a recall value of 0.25, although this was a bit to be expected.
+
+Looking at both the recall value and confusion matrix, our neural network model was able to correctly predict around a quarter of all time steps labeled with Sepsis. Although we recognized that a high recall value is incredibly important in a medical setting, we felt that it is worth pointing out that false positive sepsis diagnoses can be dangerous, as hospital resources can become stretched and we don't want to subject patients to more stress and costs by administering unnecessary treatments. Therefore, maximizing the F1-score based on the prediction throushold provided that key balance between the True Positive and Flase positive rates.
+
+<img src='/images/sepsis-thresholds.png'>
+
+I took advantage of the sigmoid function generating a vector of probabilities to calculate the F1-score at different prediction threshold values. Decreasing the threshold of being classified as Sepsis inevitably gave us higher recall, but it came at a hefty cost of increasing the False Positive rate, as well. Graphing out the relationship between the threshold and F1-score allowed us to figure out where the F1-score was maximized, and we used that threshold value on the test set predictions to receive a final F1-score of 0.173
+
+Conclusions
+------
+
+We initially faced a heavily imbalanced dataset, with only around 2% of all patients having sepsis at some point in their stay. Of these, 32% of them were correctly identified wth sepsis with our neural network classification model. For the remaining 98% of patients without sepsis, we also correctly labeled 98% of them! Considering how we tackled a dataset with 65% of it missing, we think that our data imputation methods and SMOTE implementation was quite successful. We do leave a lot of room for improvement, such as better feature engineering, exploring different models, and moving our work to cloud computing.
+
+As the competition date drew closer, my team and I rehearsed our presentation over and over again, making sure that we were fluid in our delivery and unwavering in our voices. We stopped often to give each other feedback and bounced off of each other without feeling like we were ignored. This team dynamic was incredibly refreshing and we went into that morning feeling extra confident.
+
+Although our model was not technically the best-performing across all teams, the judges were incredibly impressed by how my team focused on bringing technical material down to a level where the audience could understand our methods, keeping them engaged and being able to answer every question, and showing our preparedness. We were awarded 1st place after some heart-pounding suspense, marking the end of a wonderful experience.
+
+
+<figure>
+  <img src="/images/sepsis-photos1.jpeg" alt="Photo of everyone">
+  <figcaption>Group photo of BC Case Competition 2024. From left to right: Sasha Tomic, Arvind Sharma, Angelo Marinaro, Trevor Petrin, Pin Lyu, **Alan Lin**, David Weinberg, Debashis Rana, Larry Fulton, Matthew Williams</figcaption>
+
+  <img src="/images/sepsis-photos2.jpeg" alt="Photo of my team">
+  <figcaption>My team! So proud of everyone.
+   From left to right: Trevor Petrin, **Alan Lin**, Angelo Marinaro, and Pin Lyu. </figcaption>
+
+  <img src="/images/sepsis-photos3.jpeg" alt="Photo of Me">
+</figure>
+
