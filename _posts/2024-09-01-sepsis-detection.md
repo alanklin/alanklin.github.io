@@ -6,6 +6,8 @@ tags:
   - machine-learning
   - healthcare
 ---
+A blog post that outlines and details the end to end project completed November 2024 on Sepsis Detection.
+
 Setting the Stage
 ------
 
